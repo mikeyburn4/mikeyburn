@@ -1,180 +1,326 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --primary-color: #d98c8c; /*ff6d38 */
+    --primary-color: #d98c8c;
     --secondary-color: #000000;
     --accent1-color: #1E3A8A;
     --accent2-color: #B0B0B0;
-    --extrastuff: #E0F7FA; /* I put this one here */
-  
+    --extrastuff: #E0F7FA;
     --heading-font: "Montserrat", sans-serif;
     --paragraph-font: "Montserrat", Helvetica, sans-serif;
-  
-    --headline-color-on-white: black; /* headlines on a white background */ 
-    --headline-color-on-color: white; /* headlines on a colored background */ 
-    --paragraph-color-on-white: black; /* paragraph text on a white background */ 
-    --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+    --headline-color-on-white: black;
+    --headline-color-on-color: white;
+    --paragraph-color-on-white: black;
+    --paragraph-color-on-color: white;
     --paragraph-background-color: var(--accent1-color);
     --nav-link-color: var(--primary-color);
     --nav-background-color: var(--secondary-color);
     --nav-hover-link-color: var(--accent1-color);
     --nav-hover-background-color: var(--accent2-color);
-  }
-  
-  /*@ COLOR ID'S FOR SITE:*/
-  /*!Headers and Buttons: Red*/
-    /*?Backgrounds:deep digital blue */
-    /*^ Text: White or black*/
-    /*& Accents and Highlights: red or deep digital blue for icons + links */
-  
-  body {
-    max-width: 1200px;
+}
+
+body {
+    /* max-width: 1600px; */
     margin: 0 auto;
-    padding: 4em;
+    /* padding: 4em; */
     font-size: 18px;
     text-align: center;
-  }
-  img {
+}
+
+img {
     display: block;
     margin: 0 auto;
-  }
-  h1, h2, h3, h4, h5, h6 {
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--headline-color-on-white);
-  }
-  h2 {
+}
+
+h2 {
     text-align: center;
-  }
-  hr {
+}
+
+hr {
     height: 3px;
     margin: 35px 0;
     background: var(--accent1-color);
-  }
-  header {
+}
+
+header {
     padding: 1em;
     text-align: center;
     color: var(--headline-color-on-color);
     background-color: var(--paragraph-background-color);
-  }
-  header > h1, header > h2 {
+}
+
+header > h1, header > h2 {
     color: var(--headline-color-on-color);
-  }
-  
-  p {
+}
+
+p {
     font-family: var(--paragraph-font);
-    color: var(--paragraph-color-on-white);
+    /* color: var(--paragraph-color-on-white); */
     padding: 1em;
-  }
-  .colors {
+}
+
+.colors {
     width: 100%;
     min-width: 350px;
     margin: 30px auto;
     text-align: center;
-  }
-  .colors th {
+}
+
+.colors th {
     background-color: #999;
-  }
-  .colors td{
+}
+
+.colors td {
     width: 25%;
     height: 3em;
-  }
-  
-  .primary {
+}
+
+.primary {
     background-color: var(--primary-color);
-  }
-  .secondary {
+}
+
+.secondary {
     background-color: var(--secondary-color);
-  }
-  .accent1 {
+}
+
+.accent1 {
     background-color: var(--accent1-color);
-  }
-  .accent2{
+}
+
+.accent2 {
     background-color: var(--accent2-color);
-  }
-  
-  p.colored {
+}
+
+p.colored {
     background-color: var(--paragraph-background-color);
     color: var(--paragraph-color-on-color);
-  }
-  
-  nav {
+}
+
+nav {
     background-color: var(--nav-background-color);
     display: flex;
     align-items: center;
-    justify-content: space-between;  /* Space between logo and links */
+    justify-content: space-between;
     line-height: 3em;
     font-size: 1.2em;
     padding: 10px;
-  }
-  
-  .mikeyburn_logo {
-    width: 80px;
+}
+
+.mikeyburn_logo {
+    width: 100px;
     height: auto;
-  }
-  
-  .nav-links {
+}
+
+.nav-links {
     display: flex;
-    margin-left: auto;  /* Pushes nav-links to the right */
-  }
-  
-  nav a {
+    margin-left: auto;
+}
+
+nav a {
     margin-left: 20px;
     min-width: 120px;
     text-decoration: none;
     padding: 10px;
-  }
-  
-  nav a:link, nav a:visited {
+}
+
+nav a:link, nav a:visited {
     color: var(--nav-link-color);
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
-  }
-  
-  .sitemap {
+}
+
+#landing-img {
+    margin-top: 2%;
+}
+
+#seo_paragraph_1 {
+    padding: 2em;
+    background-color: var(--extrastuff);
+    margin: 0;
+    border-radius: 10px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#first_seo {
+    margin: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+#second_seo{
+    margin: 0;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+#seo_paragraph_2 {
+    padding: 2em;
+    background-color: var(--extrastuff);
+    margin: 0;
+    border-radius: 10px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#first_seo img {
+    width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+#second_seo img{
+    width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#social_paragraph_1 {
+    padding: 2em;
+    background-color: var(--extrastuff);
+    margin: 1em 0;
+    border-radius: 10px;
+}
+#social_paragraph_2 {
+    padding: 2em;
+    background-color: var(--extrastuff);
+    margin: 1em 0;
+    border-radius: 10px;
+}
+#first_social {
+    margin: 1em 0;
+}
+#second_social {
+    margin: 1em 0;
+}
+
+#first_social img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+#second_social img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+.sitemap {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(6, 15%);
     grid-template-rows: 3em 1.5em 1.5em 3em;
     grid-template-areas: ". . home home . ."
-      ". . . top . ."
-      ". left left right right ."
-      "page2 page2 . . page3 page3";
-  }
-  .sitemap > div {
+                          ". . . top . ."
+                          ". left left right right ."
+                          "page2 page2 . . page3 page3";
+}
+
+.sitemap > div {
     text-align: center;
-  }
-  .sm-home {
+}
+
+.sm-home {
     grid-area: home;
     background-color: #ccc;
     line-height: 3em;
-  }
-  .sm-page2 {
+}
+
+.sm-page2 {
     grid-area: page2;
     background-color: #ccc;
     line-height: 3em;
-  }
-  .sm-page3 {
+}
+
+.sm-page3 {
     grid-area: page3;
     background-color: #ccc;
     line-height: 3em;
-  }
-  
-  .top {
+}
+
+.top {
     grid-area: top;
     border-left: 1px solid;
-  }
-  
-  .left {
+}
+
+.left {
     grid-area: left;
     border-top: 1px solid;
     border-left: 1px solid;
-  }
-  
-  .right {
+}
+
+.right {
     grid-area: right;
     border-top: 1px solid;
     border-right: 1px solid;
-  }
+}
+
+#landing-box {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#landing-img {
+    width: 100%;
+    height: auto;
+}
+
+#landing-box h1 {
+    position: absolute;
+    font-size: 2em;
+    color: white;
+}
+
+#landing-welcome {
+    top: 10px;
+    left: 10px;
+}
+
+#second-landing-welcome {
+    bottom: 10px;
+    right: 10px;
+}
+
+#content-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+#seo, #social {
+    width: 48%;
+    text-align: center;
+}
+
+#seo img, #social img {
+    width: 500px;
+    height: auto;
+}
+
+footer {
+    padding: 2em;
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+#icons_social {
+    
+}
+
+#icons_social img {
+    width: 40px;
+    height: auto;
+    margin: 0 10px;
+    display: inline-block;
+}
