@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --primary-color: #d98c8c;
+    --primary-color: #ED5F80;
     --secondary-color: #000000;
     --accent1-color: #1E3A8A;
     --accent2-color: #B0B0B0;
@@ -14,15 +14,13 @@
     --paragraph-color-on-color: white;
     --paragraph-background-color: var(--accent1-color);
     --nav-link-color: var(--primary-color);
-    --nav-background-color: var(--secondary-color);
+    --nav-background-color: transparent; /* Make the nav background transparent */
     --nav-hover-link-color: var(--accent1-color);
     --nav-hover-background-color: var(--accent2-color);
 }
 
 body {
-    /* max-width: 1600px; */
     margin: 0 auto;
-    /* padding: 4em; */
     font-size: 18px;
     text-align: center;
 }
@@ -60,7 +58,6 @@ header > h1, header > h2 {
 
 p {
     font-family: var(--paragraph-font);
-    /* color: var(--paragraph-color-on-white); */
     padding: 1em;
 }
 
@@ -102,13 +99,17 @@ p.colored {
 }
 
 nav {
-    background-color: var(--nav-background-color);
+    background-color: var(--nav-background-color); /* Transparent background */
     display: flex;
     align-items: center;
     justify-content: space-between;
     line-height: 3em;
     font-size: 1.2em;
     padding: 10px;
+    position: fixed; /* Fix the nav to the top of the screen */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .mikeyburn_logo {
@@ -125,7 +126,8 @@ nav a {
     margin-left: 20px;
     min-width: 120px;
     text-decoration: none;
-    padding: 10px;
+    padding: 1px;
+    border-radius: 1px; /* Add border radius to links */
 }
 
 nav a:link, nav a:visited {
@@ -135,139 +137,21 @@ nav a:link, nav a:visited {
 nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
-}
-
-#landing-img {
-    margin-top: 2%;
-}
-
-#seo_paragraph_1 {
-    padding: 2em;
-    background-color: var(--extrastuff);
-    margin: 0;
-    border-radius: 10px;
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-#first_seo {
-    margin: 0;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-}
-#second_seo{
-    margin: 0;
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-#seo_paragraph_2 {
-    padding: 2em;
-    background-color: var(--extrastuff);
-    margin: 0;
-    border-radius: 10px;
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-
-#first_seo img {
-    width: 900px;
-    height: auto;
-    border-radius: 10px;
-}
-#second_seo img{
-    width: 900px;
-    height: auto;
-    border-radius: 10px;
-}
-
-#social_paragraph_1 {
-    padding: 2em;
-    background-color: var(--extrastuff);
-    margin: 1em 0;
-    border-radius: 10px;
-}
-#social_paragraph_2 {
-    padding: 2em;
-    background-color: var(--extrastuff);
-    margin: 1em 0;
-    border-radius: 10px;
-}
-#first_social {
-    margin: 1em 0;
-}
-#second_social {
-    margin: 1em 0;
-}
-
-#first_social img {
-    width: 80%;
-    height: auto;
-    border-radius: 10px;
-}
-#second_social img {
-    width: 80%;
-    height: auto;
-    border-radius: 10px;
-}
-.sitemap {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(6, 15%);
-    grid-template-rows: 3em 1.5em 1.5em 3em;
-    grid-template-areas: ". . home home . ."
-                          ". . . top . ."
-                          ". left left right right ."
-                          "page2 page2 . . page3 page3";
-}
-
-.sitemap > div {
-    text-align: center;
-}
-
-.sm-home {
-    grid-area: home;
-    background-color: #ccc;
-    line-height: 3em;
-}
-
-.sm-page2 {
-    grid-area: page2;
-    background-color: #ccc;
-    line-height: 3em;
-}
-
-.sm-page3 {
-    grid-area: page3;
-    background-color: #ccc;
-    line-height: 3em;
-}
-
-.top {
-    grid-area: top;
-    border-left: 1px solid;
-}
-
-.left {
-    grid-area: left;
-    border-top: 1px solid;
-    border-left: 1px solid;
-}
-
-.right {
-    grid-area: right;
-    border-top: 1px solid;
-    border-right: 1px solid;
+    border-radius: 90px; /* Add border radius to links on hover */
 }
 
 #landing-box {
     position: relative;
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    height: 100vh; /* Make landing box take full viewport height */
+    margin: 0;
+    overflow: hidden; /* Prevent overflow */
 }
 
 #landing-img {
     width: 100%;
-    height: auto;
+    height: 100%; /* Make image fill the landing box */
+    object-fit: cover; /* Ensure the image covers the box */
 }
 
 #landing-box h1 {
@@ -298,7 +182,7 @@ nav a:hover {
 }
 
 #seo img, #social img {
-    width: 500px;
+    width: 600px;
     height: auto;
 }
 
@@ -312,10 +196,6 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
-}
-
-#icons_social {
-    
 }
 
 #icons_social img {
