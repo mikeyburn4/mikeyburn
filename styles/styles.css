@@ -14,15 +14,17 @@
     --paragraph-color-on-color: white;
     --paragraph-background-color: var(--accent1-color);
     --nav-link-color: var(--primary-color);
-    --nav-background-color: transparent; /* Make the nav background transparent */
+    --nav-background-color: #B0B0B0;
     --nav-hover-link-color: var(--accent1-color);
     --nav-hover-background-color: var(--accent2-color);
 }
 
 body {
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     font-size: 18px;
     text-align: center;
+    font-family: var(--paragraph-font);
 }
 
 img {
@@ -99,22 +101,27 @@ p.colored {
 }
 
 nav {
-    background-color: var(--nav-background-color); /* Transparent background */
+    background-color: #2F4858;
     display: flex;
     align-items: center;
     justify-content: space-between;
     line-height: 3em;
     font-size: 1.2em;
-    padding: 10px;
-    position: fixed; /* Fix the nav to the top of the screen */
+    padding: 0 20px;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 .mikeyburn_logo {
-    width: 100px;
+    padding-top: 10px;
+    width: 80px;
+    padding-bottom: 10px;
     height: auto;
+    margin: 0;
 }
 
 .nav-links {
@@ -127,7 +134,9 @@ nav a {
     min-width: 120px;
     text-decoration: none;
     padding: 1px;
-    border-radius: 1px; /* Add border radius to links */
+    border-radius: 1px;
+    box-sizing: border-box;
+    font-family: var(--paragraph-font);
 }
 
 nav a:link, nav a:visited {
@@ -135,39 +144,47 @@ nav a:link, nav a:visited {
 }
 
 nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-hover-background-color);
-    border-radius: 90px; /* Add border radius to links on hover */
+    color: #00C9B0;
+    border-radius: 90px;
+    text-shadow: 0 0 5px #00C9B0, 0 0 10px #00C9B0, 0 0 15px #00C9B0, 0 0 20px #00C9B0;
+}
+
+/* Adjust content below the fixed nav */
+body {
+    margin: 0;
+    padding-top: 3em; /* Adjust based on nav height */
 }
 
 #landing-box {
     position: relative;
     width: 100%;
-    height: 100vh; /* Make landing box take full viewport height */
+    height: 100vh;
     margin: 0;
-    overflow: hidden; /* Prevent overflow */
+    padding-top: 10px; /* Add top padding to account for fixed nav height */
+    overflow: hidden;
 }
 
 #landing-img {
     width: 100%;
-    height: 100%; /* Make image fill the landing box */
-    object-fit: cover; /* Ensure the image covers the box */
+    height: 100%;
+    object-fit: fill;
 }
 
 #landing-box h1 {
     position: absolute;
-    font-size: 2em;
+    font-size: 4em;
     color: white;
 }
 
 #landing-welcome {
     top: 10px;
-    left: 10px;
+    left: 60px;
+    text-align: right;
 }
 
 #second-landing-welcome {
     bottom: 10px;
-    right: 10px;
+    right: 60px;
 }
 
 #content-container {
@@ -188,7 +205,7 @@ nav a:hover {
 
 footer {
     padding: 2em;
-    background-color: var(--secondary-color);
+    background-color: #2F4858;
     color: white;
     text-align: center;
     position: relative;
