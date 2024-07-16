@@ -137,7 +137,7 @@ nav a {
     padding: 1px;
     border-radius: 1px;
     box-sizing: border-box;
-    font-family: var(--paragraph-font);
+    font-family: var(--heading-font);
 }
 
 nav a:link, nav a:visited {
@@ -209,6 +209,7 @@ footer {
 
 #info{
     color: #ED5F80 ;
+    font-style: var(--primary-color);
     text-decoration: none;
 }
 
