@@ -206,10 +206,12 @@ footer {
     align-items: center;
     font-family: var(--paragraph-font);
 }
-
 #info{
-    color: #ED5F80 ;
-    font-style: var(--primary-color);
+    color: #ED5F80;
+    font-family: var(--heading-font); 
+}
+#info a {
+    color:#ED5F80;
     text-decoration: none;
 }
 
