@@ -17,6 +17,7 @@
     --nav-background-color: #B0B0B0;
     --nav-hover-link-color: var(--accent1-color);
     --nav-hover-background-color: var(--accent2-color);
+    --nav-hover-glow-color: #00FFFB;
 }
 
 body {
@@ -144,9 +145,9 @@ nav a:link, nav a:visited {
 }
 
 nav a:hover {
-    color: #00C9B0;
+    color: var(--nav-hover-glow-color);
     border-radius: 90px;
-    text-shadow: 0 0 5px #00C9B0, 0 0 10px #00C9B0, 0 0 15px #00C9B0, 0 0 20px #00C9B0;
+    text-shadow: 0 0 5px var(--nav-hover-glow-color), 0 0 10px var(--nav-hover-glow-color), 0 0 15px var(--nav-hover-glow-color), 0 0 20px var(--nav-hover-glow-color);
 }
 
 
@@ -203,6 +204,12 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
+    font-family: var(--paragraph-font);
+}
+
+#info{
+    color: #ED5F80 ;
+    text-decoration: none;
 }
 
 #icons_social img {
