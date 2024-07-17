@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --primary-color: #ED5F80;
+    --primary-color: #F0F0F0;
     --secondary-color: #000000;
     --accent1-color: #1E3A8A;
     --accent2-color: #B0B0B0;
@@ -207,7 +207,7 @@ footer {
     font-family: var(--paragraph-font);
 }
 #info{
-    color: #ED5F80;
+    color: #F0F0F0;
     font-family: var(--heading-font); 
 }
 #info a {
