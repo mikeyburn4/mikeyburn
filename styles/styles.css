@@ -137,7 +137,7 @@ nav a {
     padding: 1px;
     border-radius: 1px;
     box-sizing: border-box;
-    font-family: var(--heading-font);
+    font-family: var(--paragraph-font);
 }
 
 nav a:link, nav a:visited {
