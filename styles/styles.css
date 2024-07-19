@@ -208,7 +208,7 @@ body {
     box-sizing: border-box;
 }
 
-.seo_one, .seo_two, .social_one, .social_two, .landing_img, .seo, .social {
+.seo_one, .seo_two, .social_one, .social_two, .landing_with_text, .secondary_main, .third_home_image {
     width: 100%;
     box-shadow: 5px 5px 10px #000000;
 }
