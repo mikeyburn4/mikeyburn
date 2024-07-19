@@ -231,11 +231,11 @@ body {
     grid-column: 2/3;
     grid-row: 2/3;
 }
-
+/* I took this out.
 .contact-me {
     background-color: #9DADBC;
     color: #000000;
-    padding: 10px;
+    padding: 60px;
     border-radius: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -250,12 +250,12 @@ body {
     padding: 10px 20px;
     border: #2F4858;
     border-radius: 1px;
-    cursor: auto; /* I dont know what this does but i guess I needed it */
+    cursor: auto; /* I dont know what this does but i guess I needed it
 }
 .contact-me button:hover {
     background-color: #ed5f80;
 }
-
+*/
 
 footer {
     padding: 2em;
